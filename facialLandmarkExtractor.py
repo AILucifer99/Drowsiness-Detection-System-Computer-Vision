@@ -1,30 +1,3 @@
-# import cv2
-# import mediapipe
-# import time
-
-# cap = cv2.VideoCapture(0)
-# previousTime = 0 
-# drawing = mediapipe.solutions.drawing_utils
-# faceMesh = mediapipe.solutions.face_mesh
-# mesh = faceMesh.FaceMesh(static_image_mode = False, max_num_faces = 2, 
-#                             min_detection_confidence=0.5, min_tracking_confidence=0.5)
-
-# while True :
-#     success, image = cap.read()
-#     imgRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-#     results = mesh.process(imgRGB)
-#     if results.multi_face_landmarks :
-#         for faceLandmarks in results.multi_face_landmarks :
-#             drawing.draw_landmarks(imgRGB, faceLandmarks, faceMesh.FACEMESH_CONTOURS)    
-
-
-#     currentTime = time.time()
-#     FPS = 1 / (currentTime - previousTime)
-#     previousTime = currentTime
-#     cv2.putText(image, "FPS : {}".format(int(FPS)), (20, 80), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
-#     cv2.imshow("Window", image)
-#     cv2.waitKey(1)
-
 import cv2
 import mediapipe as mp  
 import time
